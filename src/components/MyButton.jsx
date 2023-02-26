@@ -1,8 +1,15 @@
 import React from "react";
 
 function MyButton() {
+
+    function clicked(){
+        alert('My Button clicked!')
+    }
+    
     return (
-        <button>My Button</button>
+        <button onClick={clicked}>
+            My Button
+        </button>
     )
 }
 
