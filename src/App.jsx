@@ -3,8 +3,11 @@ import './App.css'
 import MyButton from './components/MyButton'
 import ButtonIncrease from './components/ButtonIncrease'
 import ButtonDecrease from './components/ButtonDecrease'
+import Button from './components/Button'
 
 function App() {
+
+  const [count, setCount] = useState(0)
 
   const user = {
     fullname: "Jakkrit Chaopron",
@@ -42,6 +45,24 @@ function App() {
   return (
     // React Fragment
     <>  
+      <div>
+        <h2>Counter: {count}</h2>
+        <Button
+          explain={"+"}
+          handle= {function(){
+            setCount(count+1)
+          }}
+        />
+        <Button
+          explain={"-"}
+          handle={
+            function(){
+              setCount(count-1)
+            }
+          }
+        />
+      </div>
+
       <ButtonIncrease/>
       <ButtonDecrease/>
 
