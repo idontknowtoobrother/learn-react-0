@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import MyButton from './components/MyButton'
+import ButtonIncrease from './components/ButtonIncrease'
+import ButtonDecrease from './components/ButtonDecrease'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   const user = {
     fullname: "Jakkrit Chaopron",
@@ -41,6 +42,9 @@ function App() {
   return (
     // React Fragment
     <>  
+      <ButtonIncrease/>
+      <ButtonDecrease/>
+
       {
         isShow ? (
           <MyButton/>
